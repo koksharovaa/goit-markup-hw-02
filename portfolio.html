@@ -23,8 +23,10 @@
         </ul>
       </nav>
       <ul class="auth-nav list">
-        <li><a href="info@devstudio.com">info@devstudio.com</a></li>
-        <li><a href="+380961111111">+38 096 111 11 11</a></li>
+        <li>
+          <a href="info@devstudio.com" target="_blank">info@devstudio.com</a>
+        </li>
+        <li><a href="+380961111111" target="_blank">+38 096 111 11 11</a></li>
       </ul>
     </header>
 
@@ -33,13 +35,21 @@
       <!-- секция 1 -->
       <section>
         <h2 class="secondary-section-title">Внутренняя навигация</h2>
-        <div>
-          <button type="button" class="button secondary">Все</button>
-          <button type="button" class="button secondary">Веб-сайты</button>
-          <button type="button" class="button secondary">Приложения</button>
-          <button type="button" class="button secondary">Дизайн</button>
-          <button type="button" class="button secondary">Маркетинг</button>
-        </div>
+        <ul class="list">
+          <li><button type="button" class="button secondary">Все</button></li>
+          <li>
+            <button type="button" class="button secondary">Веб-сайты</button>
+          </li>
+          <li>
+            <button type="button" class="button secondary">Приложения</button>
+          </li>
+          <li>
+            <button type="button" class="button secondary">Дизайн</button>
+          </li>
+          <li>
+            <button type="button" class="button secondary">Маркетинг</button>
+          </li>
+        </ul>
       </section>
 
       <!-- секция 2 -->
@@ -124,10 +134,28 @@
     <!-- подвал сайта -->
     <footer class="footer">
       <a href="" class="logo">WebStudio</a>
-      <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
       <address>
-        <a href="" class="address-title">info@example.com</a> <br />
-        <a href="" class="address-title">+38 099 111 11 11</a>
+        <ul class="list">
+          <li>
+            <a href="" class="address" target="_blank"
+              >г. Киев, пр-т Леси Украинки, 26</a
+            >
+          </li>
+        </ul>
+      </address>
+      <address>
+        <ul class="list">
+          <li>
+            <a href="" class="address-title" target="_blank"
+              >info@example.com</a
+            >
+          </li>
+          <li>
+            <a href="" class="address-title" target="_blank"
+              >+38 099 111 11 11</a
+            >
+          </li>
+        </ul>
       </address>
     </footer>
   </body>
