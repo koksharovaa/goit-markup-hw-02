@@ -16,29 +16,31 @@
   </head>
 
   <body>
-    <!-- шапка сайта -->
+    <!-- шапка -->
     <header>
-      <div class="container">
+      <nav class="container">
         <a href="" class="logo">WebStudio</a>
-        <nav>
-          <ul class="site-nav list">
-            <li><a href="./index.html" class="link current">Студия</a></li>
-            <li><a href="./portfolio.html">Портфолио</a></li>
-            <li><a href="">Контакты</a></li>
-          </ul>
-        </nav>
+        <ul class="site-nav list">
+          <li class="item">
+            <a href="./index.html" class="link current">Студия</a>
+          </li>
+          <li class="item"><a href="./portfolio.html">Портфолио</a></li>
+          <li class="item"><a href="">Контакты</a></li>
+        </ul>
         <ul class="auth-nav list">
-          <li>
+          <li class="item">
             <a href="info@devstudio.com" target="_blank">info@devstudio.com</a>
           </li>
-          <li><a href="+380961111111" target="_blank">+38 096 111 11 11</a></li>
+          <li class="item">
+            <a href="+380961111111" target="_blank">+38 096 111 11 11</a>
+          </li>
         </ul>
-      </div>
+      </nav>
     </header>
 
     <!-- герой -->
     <main>
-      <section class="hero">
+      <section class="hero a-padding">
         <div class="container">
           <h1 class="hero-title">
             Эффективные решения <br />
@@ -48,38 +50,38 @@
         </div>
       </section>
 
-      <!-- секция 1 -->
-      <section class="benefits">
+      <!-- Преимущества -->
+      <section class="benefits no-paddingb">
         <div class="container">
-          <h2 class="secondary-section-title">Наши преимущества</h2>
-          <ul class="list">
-            <li>
-              <h3 class="third-section-title">Внимание к деталям</h3>
-              <p class="third-section-text">
+          <!-- <h2 class="secondary-section-title">Наши преимущества</h2> -->
+          <ul class="benefits list">
+            <li class="item">
+              <h3 class="benefits-title">Внимание к деталям</h3>
+              <p class="benefits-text">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
             </li>
 
-            <li>
-              <h3 class="third-section-title">Пунктуальность</h3>
-              <p class="third-section-text">
+            <li class="item">
+              <h3 class="benefits-title">Пунктуальность</h3>
+              <p class="benefits-text">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
             </li>
 
-            <li>
-              <h3 class="third-section-title">Планирование</h3>
-              <p class="third-section-text">
+            <li class="item">
+              <h3 class="benefits-title">Планирование</h3>
+              <p class="benefits-text">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
             </li>
 
-            <li>
-              <h3 class="third-section-title">Современные технологии</h3>
-              <p class="third-section-text">
+            <li class="item">
+              <h3 class="benefits-title">Современные технологии</h3>
+              <p class="benefits-text">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
               </p>
@@ -88,26 +90,26 @@
         </div>
       </section>
 
-      <!-- секция 2 -->
+      <!-- чем мы занимаемся -->
       <section class="busyness">
         <div class="container">
           <h2 class="secondary-section-title">Чем мы занимаемся</h2>
-          <ul class="list">
-            <li>
+          <ul class="busyness list">
+            <li class="item">
               <img
                 src="./images/person-for-laptop-in-pink-neon.jpg"
                 alt="человек, работающий за ноутбуком"
                 width="370"
               />
             </li>
-            <li>
+            <li class="item">
               <img
                 src="./images/person-for-laptop-with-phone-in-pink-neon.jpg"
                 alt="человек, который работает за ноутбуком с телефоном"
                 width="370"
               />
             </li>
-            <li>
+            <li class="item">
               <img
                 src="./images/person-by-tablet.jpg"
                 alt="человек, работающий за планшетом"
@@ -118,78 +120,76 @@
         </div>
       </section>
 
-      <!-- секция 3 -->
+      <!-- наша команда -->
       <section class="team">
         <div class="container">
           <h2 class="secondary-section-title">Наша команда</h2>
-          <ul class="list">
-            <li>
+          <ul class="team list">
+            <li class="item">
               <img
                 src="./images/m-w-glasses-and-w-a-beard.jpg"
                 alt="Игорь Демьяненко"
                 width="270"
               />
-              <h3 class="third-section-team">Игорь Демьяненко</h3>
-              <p class="third-section-text">Product Designer</p>
+              <h3 class="section-team">Игорь Демьяненко</h3>
+              <p class="section-text">Product Designer</p>
             </li>
 
-            <li>
+            <li class="item">
               <img
                 src="./images/w-in-glasses.jpg"
                 alt="Ольга Репина"
                 width="270"
               />
-              <h3 class="third-section-team">Ольга Репина</h3>
-              <p class="third-section-text">Frontend Developer</p>
+              <h3 class="section-team">Ольга Репина</h3>
+              <p class="section-text">Frontend Developer</p>
             </li>
 
-            <li>
+            <li class="item">
               <img
                 src="./images/m-with-beard.jpg"
                 alt="Николай Тарасов"
                 width="270"
               />
-              <h3 class="third-section-team">Николай Тарасов</h3>
-              <p class="third-section-text">Marketing</p>
+              <h3 class="section-team">Николай Тарасов</h3>
+              <p class="section-text">Marketing</p>
             </li>
 
-            <li>
+            <li class="item">
               <img
                 src="./images/m-in-black-t-shirt.jpg"
                 alt="Михаил Ермаков"
                 width="270"
               />
-              <h3 class="third-section-team">Михаил Ермаков</h3>
-              <p class="third-section-text">UI Designer</p>
+              <h3 class="section-team">Михаил Ермаков</h3>
+              <p class="section-text">UI Designer</p>
             </li>
           </ul>
         </div>
       </section>
     </main>
 
-    <!-- подвал сайта -->
+    <!-- подвал -->
     <footer class="footer">
-      <div class="container">
+      <div class="container footer">
         <a href="" class="logo">WebStudio</a>
-        <address>
-          <a href="" class="address" target="_blank"
-            >г. Киев, пр-т Леси Украинки, 26</a
-          >
-        </address>
-        <address>
-          <ul class="list">
-            <li>
-              <a href="" class="address-title" target="_blank"
-                >info@example.com</a
-              >
-            </li>
-            <li>
-              <a href="" class="address-title" target="_blank"
-                >+38 099 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
+        <ul class="list">
+          <li class="address">
+            <a href="" class="address" target="_blank"
+              >г. Киев, пр-т Леси Украинки, 26</a
+            >
+          </li>
+          <li class="address-title">
+            <a href="" class="address-title" target="_blank"
+              >info@example.com</a
+            >
+          </li>
+          <li class="address-title">
+            <a href="" class="address-title" target="_blank"
+              >+38 099 111 11 11</a
+            >
+          </li>
+        </ul>
       </div>
     </footer>
   </body>

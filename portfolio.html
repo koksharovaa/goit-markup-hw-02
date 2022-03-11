@@ -17,143 +17,150 @@
 
   <body class="body">
     <!-- шапка сайта -->
-    <header>
-      <a href="" class="logo">WebStudio</a>
-      <nav>
+    <header class="portfolio header">
+      <nav class="container">
+        <a href="" class="logo">WebStudio</a>
         <ul class="site-nav list">
-          <li><a href="./index.html">Студия</a></li>
-          <li><a href="./portfolio.html" class="link current">Портфолио</a></li>
-          <li><a href="">Контакты</a></li>
+          <li class="item">
+            <a href="./index.html">Студия</a>
+          </li>
+          <li class="item">
+            <a href="./portfolio.html" class="link current">Портфолио</a>
+          </li>
+          <li class="item"><a href="">Контакты</a></li>
+        </ul>
+        <ul class="auth-nav list">
+          <li class="item">
+            <a href="info@devstudio.com" target="_blank">info@devstudio.com</a>
+          </li>
+          <li class="item">
+            <a href="+380961111111" target="_blank">+38 096 111 11 11</a>
+          </li>
         </ul>
       </nav>
-      <ul class="auth-nav list">
-        <li>
-          <a href="info@devstudio.com" target="_blank">info@devstudio.com</a>
-        </li>
-        <li><a href="+380961111111" target="_blank">+38 096 111 11 11</a></li>
-      </ul>
     </header>
 
     <!-- герой -->
     <main>
       <!-- секция 1 -->
-      <section>
-        <h2 class="secondary-section-title">Опции</h2>
-        <ul class="list">
-          <li>
-            <button type="button" class="button secondary">Все</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary">Веб-сайты</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary">Приложения</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary">Дизайн</button>
-          </li>
-          <li>
-            <button type="button" class="button secondary">Маркетинг</button>
-          </li>
-        </ul>
-        <ul class="list">
-          <li>
-            <img src="./images/notebook.jpg" alt="ноутбук" width="370" />
-            <h3 class="third-section-title">Технокряк</h3>
-            <p>Веб-сайт</p>
-          </li>
-          <li>
-            <img
-              src="./images/poster.jpg"
-              alt="постер с баскетболистами"
-              width="370"
-            />
-            <h3 class="third-section-title">
-              Постер New Orlean vs Golden Star
-            </h3>
-            <p>Дизайн</p>
-          </li>
-          <li>
-            <img
-              src="./images/poster-seafood.jpg"
-              alt="постер ресторана морской еды"
-              width="370"
-            />
-            <h3 class="third-section-title">Ресторан Seafood</h3>
-            <p>Приложение</p>
-          </li>
-          <li>
-            <img src="./images/headphones.jpg" alt="наушники" width="370" />
-            <h3 class="third-section-title">Проект Prime</h3>
-            <p>Маркетинг</p>
-          </li>
-          <li>
-            <img
-              src="./images/carton-boxes.jpg"
-              alt="две картонных коробки"
-              width="370"
-            />
-            <h3 class="third-section-title">Проект Boxes</h3>
-            <p>Приложение</p>
-          </li>
-          <li>
-            <img
-              src="./images/monitor.jpg"
-              alt="монитор компьютера"
-              width="370"
-            />
-            <h3 class="third-section-title">Inspiration has no Borders</h3>
-            <p>Веб-сайт</p>
-          </li>
-          <li>
-            <img src="./images/book.jpg" alt="открытая книга" width="370" />
-            <h3 class="third-section-title">Издание Limited Edition</h3>
-            <p>Дизайн</p>
-          </li>
-          <li>
-            <img
-              src="./images/tag-LAB.jpg"
-              alt="бирка с надпьсью ЛАБ"
-              width="370"
-            />
-            <h3 class="third-section-title">Проект LAB</h3>
-            <p>Маркетинг</p>
-          </li>
-          <li>
-            <img
-              src="./images/person-by-laptop.jpg"
-              alt="человек, работающий за ноутбуком"
-              width="370"
-            />
-            <h3 class="third-section-title">Growing Business</h3>
-            <p>Приложение</p>
-          </li>
-        </ul>
+      <section class="examples">
+        <div class="container">
+          <ul class="examples-nav">
+            <li class="item">
+              <button type="button" class="button secondary">Все</button>
+            </li>
+            <li class="item">
+              <button type="button" class="button secondary">Веб-сайты</button>
+            </li>
+            <li class="item">
+              <button type="button" class="button secondary">Приложения</button>
+            </li>
+            <li class="item">
+              <button type="button" class="button secondary">Дизайн</button>
+            </li>
+            <li class="item">
+              <button type="button" class="button secondary">Маркетинг</button>
+            </li>
+          </ul>
+          <!-- <h2 class="secondary-section-title">Опции</h2> -->
+
+          <ul class="cards list">
+            <li class="item">
+              <img src="./images/notebook.jpg" alt="ноутбук" width="370" />
+              <h3 class="cards-title">Технокряк</h3>
+              <p class="cards-text">Веб-сайт</p>
+            </li>
+            <li class="item">
+              <img
+                src="./images/poster.jpg"
+                alt="постер с баскетболистами"
+                width="370"
+              />
+              <h3 class="cards-title">Постер New Orlean vs Golden Star</h3>
+              <p class="cards-text">Дизайн</p>
+            </li>
+            <li class="item">
+              <img
+                src="./images/poster-seafood.jpg"
+                alt="постер ресторана морской еды"
+                width="370"
+              />
+              <h3 class="cards-title">Ресторан Seafood</h3>
+              <p class="cards-text">Приложение</p>
+            </li>
+            <li class="item">
+              <img src="./images/headphones.jpg" alt="наушники" width="370" />
+              <h3 class="cards-title">Проект Prime</h3>
+              <p class="cards-text">Маркетинг</p>
+            </li>
+            <li class="item">
+              <img
+                src="./images/carton-boxes.jpg"
+                alt="две картонных коробки"
+                width="370"
+              />
+              <h3 class="cards-title">Проект Boxes</h3>
+              <p class="cards-text">Приложение</p>
+            </li>
+            <li class="item">
+              <img
+                src="./images/monitor.jpg"
+                alt="монитор компьютера"
+                width="370"
+              />
+              <h3 class="cards-title">Inspiration has no Borders</h3>
+              <p class="cards-text">Веб-сайт</p>
+            </li>
+            <li class="item">
+              <img src="./images/book.jpg" alt="открытая книга" width="370" />
+              <h3 class="cards-title">Издание Limited Edition</h3>
+              <p class="cards-text">Дизайн</p>
+            </li>
+            <li class="item">
+              <img
+                src="./images/tag-LAB.jpg"
+                alt="бирка с надпьсью ЛАБ"
+                width="370"
+              />
+              <h3 class="cards-title">Проект LAB</h3>
+              <p class="cards-text">Маркетинг</p>
+            </li>
+            <li class="item">
+              <img
+                src="./images/person-by-laptop.jpg"
+                alt="человек, работающий за ноутбуком"
+                width="370"
+              />
+              <h3 class="cards-title">Growing Business</h3>
+              <p class="cards-text">Приложение</p>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 
     <!-- подвал сайта -->
     <footer class="footer">
-      <a href="" class="logo">WebStudio</a>
-      <address>
-        <a href="" class="address" target="_blank"
-          >г. Киев, пр-т Леси Украинки, 26</a
-        >
-      </address>
-      <address>
+      <div class="container footer">
+        <a href="" class="logo">WebStudio</a>
         <ul class="list">
-          <li>
+          <li class="address">
+            <a href="" class="address" target="_blank"
+              >г. Киев, пр-т Леси Украинки, 26</a
+            >
+          </li>
+          <li class="address-title">
             <a href="" class="address-title" target="_blank"
               >info@example.com</a
             >
           </li>
-          <li>
+          <li class="address-title">
             <a href="" class="address-title" target="_blank"
               >+38 099 111 11 11</a
             >
           </li>
         </ul>
-      </address>
+      </div>
     </footer>
   </body>
 </html>
