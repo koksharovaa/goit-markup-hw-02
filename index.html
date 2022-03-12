@@ -19,20 +19,40 @@
     <!-- шапка -->
     <header>
       <nav class="container">
-        <a href="" class="logo">WebStudio</a>
+        <a href="./index.html" aria-label="Главная страница" class="logo"
+          >WebStudio</a
+        >
         <ul class="site-nav list">
           <li class="item">
-            <a href="./index.html" class="link current">Студия</a>
+            <a
+              href="./index.html"
+              aria-label="Страница Студия"
+              class="link current"
+              >Студия</a
+            >
           </li>
-          <li class="item"><a href="./portfolio.html">Портфолио</a></li>
-          <li class="item"><a href="">Контакты</a></li>
+          <li class="item">
+            <a href="./portfolio.html" aria-label="Страница Портфолио"
+              >Портфолио</a
+            >
+          </li>
+          <li class="item">
+            <a href="#" aria-label="Страница Контакты">Контакты</a>
+          </li>
         </ul>
         <ul class="auth-nav list">
           <li class="item">
-            <a href="info@devstudio.com" target="_blank">info@devstudio.com</a>
+            <a
+              href="info@devstudio.com"
+              target="_blank"
+              aria-label="Ссылка на почту"
+              >info@devstudio.com</a
+            >
           </li>
           <li class="item">
-            <a href="+380961111111" target="_blank">+38 096 111 11 11</a>
+            <a href="+380961111111" target="_blank" aria-label="Ссылка на номер"
+              >+38 096 111 11 11</a
+            >
           </li>
         </ul>
       </nav>
@@ -40,18 +60,24 @@
 
     <!-- герой -->
     <main>
-      <section class="hero a-padding">
+      <section class="hero">
         <div class="container">
           <h1 class="hero-title">
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button type="button" class="button primary">Заказать услугу</button>
+          <button
+            type="button"
+            aria-label="Заказать услугу"
+            class="button hero"
+          >
+            Заказать услугу
+          </button>
         </div>
       </section>
 
       <!-- Преимущества -->
-      <section class="benefits no-paddingb">
+      <section class="benefits">
         <div class="container">
           <!-- <h2 class="secondary-section-title">Наши преимущества</h2> -->
           <ul class="benefits list">
@@ -91,30 +117,39 @@
       </section>
 
       <!-- чем мы занимаемся -->
-      <section class="busyness">
+      <section class="business">
         <div class="container">
-          <h2 class="secondary-section-title">Чем мы занимаемся</h2>
-          <ul class="busyness list">
+          <h2 class="secondary-title">Чем мы занимаемся</h2>
+          <ul class="business list">
             <li class="item">
-              <img
-                src="./images/person-for-laptop-in-pink-neon.jpg"
-                alt="человек, работающий за ноутбуком"
-                width="370"
-              />
+              <div class="business-image">
+                <img
+                  class="item-image"
+                  src="./images/person-for-laptop-in-pink-neon.jpg"
+                  alt="человек, работающий за ноутбуком"
+                  width="370"
+                />
+              </div>
             </li>
             <li class="item">
-              <img
-                src="./images/person-for-laptop-with-phone-in-pink-neon.jpg"
-                alt="человек, который работает за ноутбуком с телефоном"
-                width="370"
-              />
+              <div class="business-image">
+                <img
+                  class="item-image"
+                  src="./images/person-for-laptop-with-phone-in-pink-neon.jpg"
+                  alt="человек, который работает за ноутбуком с телефоном"
+                  width="370"
+                />
+              </div>
             </li>
             <li class="item">
-              <img
-                src="./images/person-by-tablet.jpg"
-                alt="человек, работающий за планшетом"
-                width="370"
-              />
+              <div class="business-image">
+                <img
+                  class="item-image"
+                  src="./images/person-by-tablet.jpg"
+                  alt="человек, работающий за планшетом"
+                  width="370"
+                />
+              </div>
             </li>
           </ul>
         </div>
@@ -123,46 +158,58 @@
       <!-- наша команда -->
       <section class="team">
         <div class="container">
-          <h2 class="secondary-section-title">Наша команда</h2>
+          <h2 class="secondary-title">Наша команда</h2>
           <ul class="team list">
             <li class="item">
-              <img
-                src="./images/m-w-glasses-and-w-a-beard.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-              />
-              <h3 class="section-team">Игорь Демьяненко</h3>
-              <p class="section-text">Product Designer</p>
+              <div class="team-image">
+                <img
+                  class="item-image"
+                  src="./images/m-w-glasses-and-w-a-beard.jpg"
+                  alt="Игорь Демьяненко"
+                  width="270"
+                />
+              </div>
+              <h3 class="team-title">Игорь Демьяненко</h3>
+              <p class="team-text">Product Designer</p>
             </li>
 
             <li class="item">
-              <img
-                src="./images/w-in-glasses.jpg"
-                alt="Ольга Репина"
-                width="270"
-              />
-              <h3 class="section-team">Ольга Репина</h3>
-              <p class="section-text">Frontend Developer</p>
+              <div class="team-image">
+                <img
+                  class="item-image"
+                  src="./images/w-in-glasses.jpg"
+                  alt="Ольга Репина"
+                  width="270"
+                />
+              </div>
+              <h3 class="team-title">Ольга Репина</h3>
+              <p class="team-text">Frontend Developer</p>
             </li>
 
             <li class="item">
-              <img
-                src="./images/m-with-beard.jpg"
-                alt="Николай Тарасов"
-                width="270"
-              />
-              <h3 class="section-team">Николай Тарасов</h3>
-              <p class="section-text">Marketing</p>
+              <div class="team-image">
+                <img
+                  class="item-image"
+                  src="./images/m-with-beard.jpg"
+                  alt="Николай Тарасов"
+                  width="270"
+                />
+              </div>
+              <h3 class="team-title">Николай Тарасов</h3>
+              <p class="team-text">Marketing</p>
             </li>
 
             <li class="item">
-              <img
-                src="./images/m-in-black-t-shirt.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-              />
-              <h3 class="section-team">Михаил Ермаков</h3>
-              <p class="section-text">UI Designer</p>
+              <div class="team-image">
+                <img
+                  class="item-image"
+                  src="./images/m-in-black-t-shirt.jpg"
+                  alt="Михаил Ермаков"
+                  width="270"
+                />
+              </div>
+              <h3 class="team-title">Михаил Ермаков</h3>
+              <p class="team-text">UI Designer</p>
             </li>
           </ul>
         </div>
@@ -172,20 +219,30 @@
     <!-- подвал -->
     <footer class="footer">
       <div class="container footer">
-        <a href="" class="logo">WebStudio</a>
-        <ul class="list">
+        <a href="./index.html" aria-label="Главная страница" class="logo"
+          >WebStudio</a
+        >
+        <ul class="footer-list">
           <li class="address">
             <a href="" class="address" target="_blank"
               >г. Киев, пр-т Леси Украинки, 26</a
             >
           </li>
           <li class="address-title">
-            <a href="" class="address-title" target="_blank"
+            <a
+              href=""
+              aria-label="Ссыдка на почту"
+              class="address-title"
+              target="_blank"
               >info@example.com</a
             >
           </li>
           <li class="address-title">
-            <a href="" class="address-title" target="_blank"
+            <a
+              href=""
+              aria-label="Ссылка на номер телефона"
+              class="address-title"
+              target="_blank"
               >+38 099 111 11 11</a
             >
           </li>

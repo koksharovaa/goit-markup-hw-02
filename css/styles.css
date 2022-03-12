@@ -29,6 +29,7 @@ ul {
 }
 
 a {
+  padding: 5px;
   text-decoration: none;
 }
 
@@ -147,7 +148,7 @@ nav {
   letter-spacing: 0.06em;
 }
 
-.hero.a-padding {
+.hero {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -164,7 +165,7 @@ nav {
   cursor: pointer;
 }
 
-.button.primary {
+.button.hero {
   color: var(--white-color);
   background-color: var(--accent-color);
 
@@ -197,29 +198,27 @@ nav {
   background-color: var(--accent-color);
 }
 
-.button.primary:focus {
+.button.hero:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
 }
 
 /* шо по секциям */
-.hero,
-.busyness,
+.business,
 .team,
-.benefits,
 .examples {
   padding-bottom: 94px;
   padding-top: 94px;
 }
 
-.benefits.no-paddingb {
+.benefits {
   padding-bottom: 0;
   padding-top: 94px;
 }
 
 .benefits.list {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 
   padding-top: 0;
   padding-bottom: 0;
@@ -227,28 +226,37 @@ nav {
 
 .benefits .item {
   width: calc((100% - 90px) / 4);
-  margin-right: 30px;
 }
 
-.benefits .item:nth-child(4n) {
+/* .benefits .item:nth-child(4n) {
   margin-right: 0;
-}
+} */
 
-.busyness.list {
+.business.list {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.busyness .item {
+.business .item {
   width: calc((100% - 60px) / 3);
-  margin-right: 30px;
 }
 
-.busyness .item:nth-child(3n) {
+/* .business .item:nth-child(3n) {
   margin-right: 0;
+} */
+
+.business-image {
+  display: flex;
+}
+
+.item-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
 }
 
 .team {
@@ -257,7 +265,7 @@ nav {
 
 .team.list {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 
   padding-top: 0;
   padding-bottom: 0;
@@ -265,11 +273,14 @@ nav {
 
 .team .item {
   width: calc((100% - 90px) / 4);
-  margin-right: 30px;
 }
 
-.team .item:nth-child(4n) {
+/* .team .item:nth-child(4n) {
   margin-right: 0;
+} */
+
+.team-image {
+  display: flex;
 }
 
 .examples-nav {
@@ -322,7 +333,7 @@ nav {
   letter-spacing: 0.03em;
 }
 
-.secondary-section-title {
+.secondary-title {
   margin-top: 0;
   margin-bottom: 50px;
   color: var(--secondary-text-color);
@@ -369,13 +380,13 @@ nav {
   margin-bottom: 20px;
 }
 
-.section-text {
+.team-text {
   text-align: center;
   margin-bottom: 30px;
   margin-top: 10px;
 }
 
-.section-team {
+.team-title {
   margin-bottom: 0px;
   margin-top: 30px;
   color: var(--secondary-text-color);
@@ -393,9 +404,12 @@ nav {
   background-color: var(--third-bg-color);
 }
 
-.address {
+.footer-list {
   margin-top: 20px;
+  list-style: none;
+}
 
+.address {
   color: var(--white-color);
 }
 
