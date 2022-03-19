@@ -48,6 +48,8 @@ a {
 }
 
 .container.footer {
+  display: flex;
+
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -110,6 +112,12 @@ nav {
 
 .auth-nav {
   display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
   margin-left: auto;
 }
 
@@ -118,7 +126,8 @@ nav {
 }
 
 .auth-nav a {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -129,10 +138,39 @@ nav {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.auth-nav a:hover,
-.auth-nav a:focus {
+
+.contact {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--primary-text-color);
+}
+
+.contact:hover,
+.contact:focus {
   color: var(--accent-color);
 }
+
+.contact:hover .mail,
+.contact:focus .mail {
+  fill: var(--accent-color);
+}
+
+.mail {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+
+/* .letter::before {
+  display: inline-block;
+  content: '';
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-color: rebeccapurple;
+  background-image: url('../images/envelope.svg');
+  background-size: contain;
+} */
 
 /* герой */
 .hero-title {
@@ -149,10 +187,28 @@ nav {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  /* padding-top: 200px;
+  padding-bottom: 200px; */
   text-align: center;
   background-color: var(--third-bg-color);
+}
+
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  padding-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  /* outline: 1px solid turquoise; */
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/new_photo.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* кнопочки */
@@ -206,7 +262,8 @@ nav {
 /* шо по секциям */
 .business,
 .team,
-.examples {
+.examples,
+.customers {
   padding-bottom: 94px;
   padding-top: 94px;
 }
@@ -226,6 +283,32 @@ nav {
 
 .benefits .item {
   width: calc((100% - 90px) / 4);
+}
+
+.benefits .item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--secondary-bg-color);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.item.details::before {
+  background-image: url('../images/antenna.svg');
+}
+
+.item.clock::before {
+  background-image: url('../images/clock.svg');
+}
+
+.item.diagram::before {
+  background-image: url('../images/diagram.svg');
+}
+
+.item.astronaut::before {
+  background-image: url('../images/astronaut1.svg');
 }
 
 /* .benefits .item:nth-child(4n) {
@@ -273,6 +356,11 @@ nav {
 
 .team .item {
   width: calc((100% - 90px) / 4);
+
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 /* .team .item:nth-child(4n) {
@@ -281,6 +369,53 @@ nav {
 
 .team-image {
   display: flex;
+}
+
+.customers.list {
+  display: flex;
+
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.customers .item {
+  width: calc((100% - 150px) / 6);
+}
+
+.customers .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.link-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.customers-image {
+  height: 60px;
+  padding: 0;
+
+  fill: #afb1b8;
+}
+
+.link-item:hover,
+.link-item:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.link-item:hover .customers-image,
+.link-item:focus .customers-image {
+  fill: var(--accent-color);
 }
 
 .examples-nav {
@@ -321,6 +456,11 @@ nav {
 
 .cards .item:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+.cards .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .section-title {
@@ -382,7 +522,7 @@ nav {
 
 .team-text {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   margin-top: 10px;
 }
 
@@ -399,9 +539,49 @@ nav {
   letter-spacing: 0.06em;
 }
 
+.info.list {
+  display: flex;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 24px;
+}
+
+.info .links {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.links:hover,
+.links:focus {
+  background-color: var(--accent-color);
+}
+
+.links:hover .team-social,
+.links:focus .team-social {
+  fill: var(--white-color);
+}
+
+.team-social {
+  fill: #afb1b8;
+}
+
 /* подвальчик */
 .footer {
   background-color: var(--third-bg-color);
+}
+
+.nav-block {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-navigation {
+  margin-right: 70px;
 }
 
 .footer-list {
@@ -426,4 +606,53 @@ nav {
 .address-title:focus,
 .address-title:hover {
   color: var(--accent-color);
+}
+
+.join-block {
+  display: block;
+}
+
+.join {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  display: block;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.add.list {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.add .item {
+  width: calc((100%-30px) / 4);
+  margin-right: 10px;
+}
+
+.add .item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.add .item .links {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.add .item .links:focus,
+.add .item .links:hover {
+  color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.add-social {
+  fill: var(--white-color);
 }
