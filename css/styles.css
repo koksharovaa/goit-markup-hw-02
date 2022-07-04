@@ -6,6 +6,7 @@
   --bg-color: #f5f4fa;
   --secondary-bg-color: #e5e5e5;
   --third-bg-color: #2f303a;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -40,7 +41,6 @@ a {
 }
 
 .container {
-  /* outline: 2px solid tomato; */
   padding-left: 15px;
   padding-right: 15px;
   margin: auto;
@@ -62,10 +62,12 @@ a {
 
 nav {
   display: flex;
-  align-items: center;
 }
 
 .logo {
+  padding: 0;
+  padding-top: 24px;
+  padding-bottom: 25px;
   color: var(--accent-color);
 
   font-family: Raleway;
@@ -85,10 +87,10 @@ nav {
 
 .site-nav .item + .item {
   margin-left: 50px;
-  /* background-color: tomato; */
 }
 
 .site-nav a {
+  position: relative;
   display: block;
   padding-bottom: 32px;
   padding-top: 32px;
@@ -99,6 +101,10 @@ nav {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .site-nav a:hover,
@@ -107,16 +113,29 @@ nav {
 }
 
 .site-nav .link.current {
+  position: relative;
+  display: block;
   color: var(--accent-color);
+}
+
+.site-nav .link.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+
+  transition: opasity 250ms var(--timing-function);
 }
 
 .auth-nav {
   display: flex;
   align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 
   margin-left: auto;
 }
@@ -144,6 +163,10 @@ nav {
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .contact:hover,
@@ -159,6 +182,10 @@ nav {
 .mail {
   margin-right: 10px;
   fill: var(--primary-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 /* .letter::before {
@@ -174,7 +201,6 @@ nav {
 
 /* герой */
 .hero-title {
-  /* outline: 2px solid tomato; */
   padding-bottom: 30px;
   padding-top: 0;
 
@@ -187,10 +213,7 @@ nav {
 }
 
 .hero {
-  /* padding-top: 200px;
-  padding-bottom: 200px; */
   text-align: center;
-  background-color: var(--third-bg-color);
 }
 
 .overlay {
@@ -199,7 +222,6 @@ nav {
   padding-top: 200px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 1px solid turquoise; */
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -211,6 +233,36 @@ nav {
   background-size: cover;
 }
 
+/* модальное окно */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  z-index: 1;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--white-color);
+  transform: translate(-50%, -50%);
+
+  top: 50%;
+  left: 50%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
 /* кнопочки */
 .button {
   border-radius: 4px;
@@ -226,9 +278,33 @@ nav {
   background-color: var(--accent-color);
 
   font-weight: bold;
-  font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.06em;
+}
+
+.button.hero:focus {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+
+.modal-button {
+  position: absolute;
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  left: 490px;
+  top: 8px;
+  right: 8px;
+
+  background-color: var(--white-color);
+  background-image: url('../images/Vector.svg');
+  background-size: 11px 11px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .button.secondary {
@@ -246,15 +322,14 @@ nav {
   padding-bottom: 6px;
   padding-left: 22px;
   padding-right: 22px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .button.secondary:hover,
 .button.secondary:focus {
-  color: var(--white-color);
-  background-color: var(--accent-color);
-}
-
-.button.hero:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
 }
@@ -311,10 +386,6 @@ nav {
   background-image: url('../images/astronaut1.svg');
 }
 
-/* .benefits .item:nth-child(4n) {
-  margin-right: 0;
-} */
-
 .business.list {
   display: flex;
   justify-content: space-between;
@@ -325,14 +396,6 @@ nav {
 
 .business .item {
   width: calc((100% - 60px) / 3);
-}
-
-/* .business .item:nth-child(3n) {
-  margin-right: 0;
-} */
-
-.business-image {
-  display: flex;
 }
 
 .item-image {
@@ -363,27 +426,21 @@ nav {
   border-radius: 0px 0px 4px 4px;
 }
 
-/* .team .item:nth-child(4n) {
-  margin-right: 0;
-} */
-
 .team-image {
   display: flex;
 }
 
 .customers.list {
   display: flex;
+  justify-content: space-between;
 
+  width: 1170px;
   padding-top: 0;
   padding-bottom: 0;
 }
 
 .customers .item {
   width: calc((100% - 150px) / 6);
-}
-
-.customers .item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .link-item {
@@ -399,6 +456,10 @@ nav {
   padding-bottom: 16px;
   padding-right: 32px;
   padding-left: 32px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .customers-image {
@@ -406,6 +467,10 @@ nav {
   padding: 0;
 
   fill: #afb1b8;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .link-item:hover,
@@ -442,6 +507,34 @@ nav {
   padding-bottom: 0;
 }
 
+.business-image {
+  position: relative;
+  display: flex;
+
+  overflow: hidden;
+}
+
+.business-image > .label {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  margin: 0;
+  padding-top: 27px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--white-color);
+}
+
 .cards .item {
   width: calc((100% - 60px) / 3);
 
@@ -461,6 +554,36 @@ nav {
 .cards .item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.cards .item:hover .replacement {
+  transform: translatey(0);
+}
+
+.replacement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translatey(100%);
+  transition: transform 250ms ease;
+}
+
+.replacement > p {
+  color: var(--white-color);
+  padding-left: 24px;
+  padding-top: 63px;
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.replacement:nth-child(-n + 6) {
+  margin-top: 1px;
 }
 
 .section-title {
@@ -503,8 +626,9 @@ nav {
 
 .cards-title {
   margin-top: 20px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   margin-left: 24px;
+  margin-right: 24px;
   color: var(--secondary-text-color);
 
   font-weight: bold;
@@ -516,7 +640,8 @@ nav {
 
 .cards-text {
   margin-left: 24px;
-  margin-top: 0;
+  margin-right: 24px;
+  margin-top: 2px;
   margin-bottom: 20px;
 }
 
@@ -554,6 +679,10 @@ nav {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .links:hover,
@@ -591,6 +720,10 @@ nav {
 
 .address {
   color: var(--white-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .address:hover,
@@ -601,6 +734,10 @@ nav {
 .address-title {
   margin-top: 9px;
   color: rgba(255, 255, 255, 0.6);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .address-title:focus,
@@ -645,6 +782,10 @@ nav {
 
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .add .item .links:focus,
