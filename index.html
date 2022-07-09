@@ -88,7 +88,74 @@
 
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <button class="modal-button" data-modal-close></button>
+            <button type="button" class="modal-button" data-modal-close>
+              <svg width="11px" height="11px">
+                <use href="/images/symbol-defs.svg#icon-close"></use>
+              </svg>
+            </button>
+            <form class="form">
+              <h4 class="form-title">
+                Оставьте свои данные, мы вам перезвоним
+              </h4>
+              <div class="form-field">
+                <label for="user-name" class="form-label">Имя</label>
+                <input
+                  type="text"
+                  name="user-name"
+                  id="user-name"
+                  class="form-input"
+                />
+
+                <svg class="form-icon" width="12px" height="12px">
+                  <use href="/images/symbol-defs.svg#icon-human"></use>
+                </svg>
+              </div>
+              <div class="form-field">
+                <label for="telephone" class="form-label">Телефон</label>
+
+                <input
+                  type="text"
+                  name="telephone"
+                  id="telephone"
+                  class="form-input"
+                />
+                <svg class="form-icon" width="12px" height="12px">
+                  <use href="/images/symbol-defs.svg#icon-tel"></use>
+                </svg>
+              </div>
+              <div class="form-field">
+                <label for="email" class="form-label">Почта</label>
+                <input type="text" name="email" id="email" class="form-input" />
+                <svg class="form-icon" width="12px" height="12px">
+                  <use href="/images/symbol-defs.svg#icon-pochta"></use>
+                </svg>
+              </div>
+              <div class="form-field">
+                <label for="comment" class="form-label">Коментарии</label>
+                <textarea
+                  class="comment"
+                  name="comment"
+                  id="comment"
+                  placeholder="Введите текст"
+                ></textarea>
+              </div>
+
+              <div class="form-agreement">
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="checkbox"
+                    name="topic"
+                    value=""
+                  />
+                  <span class="checkbox-icon"></span>
+                  Соглашаюсь с рассылкой и принимаю
+                  <a href="#">Условия договора</a></label
+                >
+              </div>
+
+              <button type="submit" class="button hero">Отправить</button>
+            </form>
           </div>
         </div>
       </section>
@@ -434,9 +501,21 @@
     <!-- подвал -->
     <footer class="footer">
       <div class="container footer">
-        <div class="nav-block">
+        <div class="footer-titles">
+          <div class="title-first-child">
+            <a href="./index.html" aria-label="Лого" class="footer-logo"
+              >WebStudio</a
+            >
+          </div>
+          <div class="title-second-child">
+            <b class="join">Присоединяйтесь</b>
+          </div>
+          <div class="title-third-child">
+            <b class="join">Подпишитесь на рассылку</b>
+          </div>
+        </div>
+        <div class="footer-info">
           <div class="footer-navigation">
-            <a href="./index.html" aria-label="Лого" class="logo">WebStudio</a>
             <ul class="footer-list">
               <li class="address">
                 <a href="#" class="address" target="_blank"
@@ -463,42 +542,53 @@
               </li>
             </ul>
           </div>
-        </div>
-        <div class="join-block">
-          <b class="join">Присоединяйтесь</b>
-          <ul class="add list">
-            <li class="item">
-              <a href="#" aria-label="Ссылка на Instagram" class="links">
-                <svg class="add-social" width="20px" height="20px">
-                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="item">
-              <a href="#" aria-label="Ссылка на Twitter" class="links">
-                <svg class="add-social" width="20px" height="20px">
-                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="item">
-              <a href="#" aria-label="Ссылка на Facebook" class="links">
-                <svg class="add-social" width="20px" height="20px">
-                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="item">
-              <a href="#" aria-label="Ссылка на LinkedIN" class="links">
-                <svg class="add-social" width="20px" height="20px">
-                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          <div class="join-block">
+            <ul class="add list">
+              <li class="item">
+                <a href="#" aria-label="Ссылка на Instagram" class="links">
+                  <svg class="add-social" width="20px" height="20px">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#" aria-label="Ссылка на Twitter" class="links">
+                  <svg class="add-social" width="20px" height="20px">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#" aria-label="Ссылка на Facebook" class="links">
+                  <svg class="add-social" width="20px" height="20px">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#" aria-label="Ссылка на LinkedIN" class="links">
+                  <svg class="add-social" width="20px" height="20px">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="form-container">
+            <form action="" class="footer-form">
+              <input
+                type="text"
+                name="email"
+                class="email-footer"
+                placeholder="E-mail"
+              />
+              <a href="#" class="button footer"> Подписаться </a>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>
