@@ -333,9 +333,12 @@ nav {
   transition-timing-function: var(--timing-function);
 }
 
-.form-input:hover,
+.form-input:hover {
+  border-color: var(--accent-color);
+}
+
 .form-input:focus {
-  border: 1px solid var(--accent-color);
+  outline: 1px solid var(--accent-color);
 }
 
 .form-input:hover ~ svg {
@@ -373,6 +376,7 @@ nav {
   cursor: pointer;
 
   transition-property: background-color;
+  transition-property: border-color;
   /* transition-property: background-image; */
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
@@ -384,6 +388,14 @@ nav {
   background-origin: border-box;
   background-image: url('../images/checkbox.svg');
   background-size: contain;
+}
+
+.checkbox-icon:hover {
+  border-color: var(--accent-color);
+}
+
+.checkbox-icon:focus {
+  outline: red;
 }
 
 .form-icon {
@@ -420,9 +432,12 @@ nav {
   transition-timing-function: var(--timing-function);
 }
 
-.comment:hover,
-.comment:focus {
+.comment:hover {
   border: 1px solid var(--accent-color);
+}
+
+.comment:focus {
+  outline: 1px solid var(--accent-color);
 }
 
 .comment::placeholder {
@@ -454,6 +469,15 @@ nav {
 .form-agreement a {
   color: var(--accent-color);
   text-decoration: underline;
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
+.form-agreement a:hover,
+.form-agreement a:focus {
+  transform: scale(1.05);
 }
 
 /* кнопочки */
@@ -476,12 +500,21 @@ nav {
   font-weight: bold;
   line-height: 1.8;
   letter-spacing: 0.06em;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
-.button.hero,
+.button.hero:focus,
 .button.footer:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
+}
+
+.button.hero:hover,
+.button.footer:hover {
+  background-color: #1976d2;
 }
 
 .button.footer {
@@ -506,6 +539,7 @@ nav {
   background-repeat: no-repeat;
   cursor: pointer;
   align-items: center;
+  background-position: center;
 }
 
 .modal-button {
@@ -1077,22 +1111,22 @@ nav {
   width: 358px;
   height: 50px;
   margin-right: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
 
   background-color: var(--third-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 
   transition-property: border;
+  transition-property: outline;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
 
 .email-footer::placeholder {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 16px;
-  padding-right: 16px;
-
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -1105,4 +1139,8 @@ nav {
 
 .email-footer:hover {
   border: 2px solid var(--accent-color);
+}
+
+.email-footer:focus {
+  outline: 2px solid var(--accent-color);
 }
